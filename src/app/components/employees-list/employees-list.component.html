@@ -1,0 +1,25 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+<hr>
+  <div>
+    <nav>
+      <a [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>Create Employee</a>
+    </nav>
+  </div>
+<h2>Filter:</h2>
+
+<div>
+  <div>
+  <label>Employee ID: </label>
+  <input type="text" [(ngModel)]="filterId">
+  </div>
+  <div>
+    <label>Qualification:</label>
+      <select [(ngModel)]="filterQualification">
+        <option value="" selected="selected">--<option>
+        <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
+      </select>
+  </div>
+</div>
+  <hr>
+  <app-employee-display [filterId]="filterId" [filterQualification]="filterQualification"></app-employee-display>
+</div>

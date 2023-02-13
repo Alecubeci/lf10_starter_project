@@ -1,0 +1,55 @@
+<h2 *ngIf="editEmployee.id===-1">Create new employee</h2>
+<h2 *ngIf="editEmployee.id!==-1">User Data</h2>
+
+<nav>
+  <a [routerLink]="['/employees']">Employees</a>
+  <a [routerLink]="['/qualifications']">Qualifications</a>
+</nav>
+<router-outlet></router-outlet>
+
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+  <div>
+    <label for="editEmployee-LastName">Last Name: </label>
+    <input type="text" class="form-control" id="editEmployee-LastName" required [(ngModel)]="editEmployee.lastName"
+           name="editEmployee-LastName">
+    <label for="editEmployee-Phone">Phone: </label>
+    <input type="text" class="form-control" id="editEmployee-Phone" required [(ngModel)]="editEmployee.phone"
+           name="editEmployee-Phone">
+    <label for="editEmployee-Postcode">Postcode: </label>
+    <input type="text" class="form-control" id="editEmployee-Postcode" required minlength="5" maxlength="5"
+           [(ngModel)]="editEmployee.postcode" name="editEmployee-Postcode">
+    <div class="qualification-container" *ngFor="let q of editEmployee.qualifications">
+<span>
+  <label>{{q.designation}}</label>
+  <button (click)="deleteQualification(q)">x</button>
+</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="editEmployee-firstName">First Name: </label>
+    <input type="text" class="form-control" id="editEmployee-firstName" required [(ngModel)]="editEmployee.firstName"
+           name="editEmployee-firstName">
+    <label for="editEmployee-Street">Street: </label>
+    <input type="text" class="form-control" id="editEmployee-Street" required [(ngModel)]="editEmployee.street"
+           name="editEmployee-Street">
+    <label for="editEmployee-City">City: </label>
+    <input type="text" class="form-control" id="editEmployee-City" required [(ngModel)]="editEmployee.city"
+           name="editEmployee-City">
+    <select [(ngModel)]="selectedQualification" name="editEmployee-Qualifications">
+      <ng-container *ngFor="let q of qualificationService.qualifications$ | async">
+        <option *ngIf="!containsQualification(editEmployee.qualifications,q)" [ngValue]="q">{{q.designation}}</option>
+      </ng-container>
+    </select>
+    <button type="button" class="btn btn-primary" (click)="addQualification()">Add</button>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-primary" (click)="backToPreviousSite()">Back</button>
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
+<span>
+
+  <button type="button" class="material-icons" (click)="deleteEmployee(editEmployee)">delete</button>
+</span>
+  </div>
+</form>
+

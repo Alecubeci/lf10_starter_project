@@ -1,0 +1,15 @@
+<form>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="uname" name="uname" required [(ngModel)]="username">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" name="psw" required [(ngModel)]="password">
+
+    <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+
+  </div>
+  <div class="container">
+    {{stateMessage}}
+  </div>
+</form>

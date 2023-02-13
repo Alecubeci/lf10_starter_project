@@ -1,0 +1,24 @@
+h2{
+  text-align: center;
+}
+form{
+
+}
+.form-control{
+  width: 400px;
+}
+.btn{
+  margin: 5px;
+}
+span{
+border:1px solid black
+}
+.qualification-container{display:inline-block}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 20px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 20px solid #a94442; /* red */
+}
