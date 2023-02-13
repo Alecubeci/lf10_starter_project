@@ -1,11 +1,11 @@
 <form>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="uname" name="uname" required [(ngModel)]="username">
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" name="psw" required [(ngModel)]="password">
-
+  <div class="container1">
+    <input type="text" placeholder="Username" id="uname" name="uname" required [(ngModel)]="username">
+  </div>
+  <div class="container2">
+    <input type="password" placeholder="Password" id="psw" name="psw" required [(ngModel)]="password">
+  </div>
+  <div class="container3">
     <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
 
   </div>
