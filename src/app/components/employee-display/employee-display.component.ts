@@ -28,20 +28,9 @@ export class EmployeeDisplayComponent implements OnInit {
     this.router.navigateByUrl('/modifyEmployee', { state: employee });
   }
 
-  deleteEmployee(employee: Employee){
-    function validate(){
+  deleteEmployee(employee: Employee, checkyboxn: boolean){
 
-      var element = <HTMLInputElement> document.getElementById("check");
-      var isChecked = element.checked;
-
-      if (isChecked){
-        alert("checked");
-      }
-      else {
-        alert("Nichts Ausgewählt");
-      }
-    }
-    this.employeeService.deleteEmployee(employee);
+    this.employeeService.deleteEmployee(employee, checkyboxn);
   }
 
 

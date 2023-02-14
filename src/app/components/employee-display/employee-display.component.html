@@ -16,7 +16,7 @@
   <ng-container *ngFor="let s of employeeService.employees$ |async">
     <tbody *ngIf="(!filterId||s.id==filterId)&&(!filterQualification||containsQualification(s.qualifications,filterQualification))">
     <tr>
-      <td><input type="checkbox" name="check" id="check" ></td>
+      <td><input type="checkbox" name="checky" id="checkyboxn" ></td>
       <td>{{s.id}}</td>
       <td>{{s.lastName}}</td>
       <td>{{s.firstName}}</td>
@@ -44,4 +44,5 @@
 
 </table>
 <ng-container *ngFor="let s of employeeService.employees$ |async">
-<button type="button"  (click)="deleteEmployee(s)">Delete</button>
+<button type="button"  (click)="deleteEmployee(s, true)">Delete</button>
+</ng-container>
