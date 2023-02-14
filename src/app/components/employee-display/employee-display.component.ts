@@ -13,8 +13,8 @@ export class EmployeeDisplayComponent implements OnInit {
 
   @Input() filterId?: number|string;
   @Input() filterQualification?: string;
-  constructor(private router: Router, public employeeService: EmployeeService) {
 
+  constructor(private router: Router, public employeeService: EmployeeService) {
   }
 
   containsQualification(array: Qualification[], q: string) : boolean {
@@ -29,7 +29,21 @@ export class EmployeeDisplayComponent implements OnInit {
   }
 
   deleteEmployee(employee: Employee){
+    function validate(){
+
+      var element = <HTMLInputElement> document.getElementById("check");
+      var isChecked = element.checked;
+
+      if (isChecked){
+        alert("checked");
+      }
+      else {
+        alert("Nichts Ausgewählt");
+      }
+    }
     this.employeeService.deleteEmployee(employee);
   }
+
+
 
 }

@@ -1,16 +1,11 @@
 <div class="container" xmlns="http://www.w3.org/1999/html">
 <hr>
-  <div>
-    <nav>
-      <a [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>Create Employee</a>
-    </nav>
-  </div>
-<h2>Filter:</h2>
+
+
 
 <div>
   <div>
-  <label>Employee ID: </label>
-  <input type="text" [(ngModel)]="filterId">
+    <input type="text" placeholder="ID-Suche" [(ngModel)]="filterId">
   </div>
   <div>
     <label>Qualification:</label>
@@ -18,6 +13,12 @@
         <option value="" selected="selected">--<option>
         <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
       </select>
+    <nav>
+      <add [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>Add</add>
+
+
+    </nav>
+
   </div>
 </div>
   <hr>

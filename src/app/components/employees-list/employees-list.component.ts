@@ -6,7 +6,8 @@ import {Employee} from "../../model/Employee";
 @Component({
   selector: 'app-employees-list',
   templateUrl: './employees-list.component.html',
-  styleUrls: ['./employees-list.component.css']
+  styleUrls: ['./employees-list.component.css'],
+
 })
 export class EmployeesListComponent implements OnInit {
 
@@ -25,4 +26,9 @@ export class EmployeesListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
+
+
+
