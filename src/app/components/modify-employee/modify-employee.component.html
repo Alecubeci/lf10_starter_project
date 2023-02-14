@@ -2,11 +2,13 @@
 <h2 *ngIf="editEmployee.id!==-1">User Data</h2>
 
 <nav>
-  <a [routerLink]="['/employees']">Employees</a>
   <a [routerLink]="['/qualifications']">Qualifications</a>
 </nav>
 <router-outlet></router-outlet>
 
+<div>
+
+</div>
 <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
   <div class="left-column">
     <label for="editEmployee-LastName">Last Name: </label>
@@ -21,7 +23,7 @@
     <div class="qualification-container" *ngFor="let q of editEmployee.qualifications">
     <span>
     <label>{{q.designation}}</label>
-    <button type="button" class="btn btn-primary" (click)="deleteQualification(q)">x</button>
+    <button type="button" class="btn btn-outline-dark-sm" (click)="deleteQualification(q)">🞬</button>
     </span>
     </div>
   </div>
@@ -41,14 +43,12 @@
     </ng-container>
     </select>
     <button type="button" class="btn btn-primary" (click)="addQualification()">Add</button>
-    <button type="button" class="btn btn-primary" (click)="deleteEmployee(editEmployee, true)">Delete</button>
   </div>
 
-
-
-  <div class="nav">
-    <button type="button" class="btn btn-primary" (click)="backToPreviousSite()">Back</button>
+  <div class="lower-column">
     <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
+    <button type="button" class="btn btn-primary" [disabled]="editEmployee.id===-1" (click)="deleteEmployee(editEmployee, true); backToPreviousSite()">Delete</button>
+    <button type="button" class="btn btn-primary" (click)="backToPreviousSite()">Cancel</button>
   </div>
 </form>
 

@@ -1,5 +1,6 @@
 h2{
   text-align: center;
+  margin: 5px;
 }
 .left-column{
   float: left;
@@ -14,9 +15,11 @@ h2{
   display: inline-block;
 
 }
-.nav{
-  float: bottom;
-  display: block;
+.lower-column{
+  position: fixed;
+  left: 50%;
+  bottom: 100px;
+  transform: translate(-50%, 50%);
 }
 form{
 
@@ -24,8 +27,14 @@ form{
 .form-control{
   width: 400px;
 }
+.qualification-container{
+  margin-top: 15px;
+}
+select{
+  margin-top: 15px;
+}
 .btn{
-
+  margin-left: 10px;
 }
 span{
 border:1px solid black

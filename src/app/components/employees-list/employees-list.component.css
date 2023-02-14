@@ -12,29 +12,33 @@ add{
   padding: 10px 10px;
   margin-left: 20px;
 }
+
 .search{
-
   margin-left: 50px;
+  margin-right: 15px;
+}
 
-
+select{
+  margin-left: 5px;
 }
 
 button{
   margin-left: 20px;
 }
+
 div{
   display: inline;
 }
 
 .container{
   margin-left: 80px;
-
 }
 
 nav a:hover {
   color: white;
   background-color: #42545C;
 }
+
 nav a.active {
   background-color: black;
 }
