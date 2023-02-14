@@ -1,4 +1,4 @@
-import {Component, OnInit, Predicate} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Employee} from "../../model/Employee";
 import {EmployeeService} from "../../service/employee.service";
 import {QualificationService} from "../../service/qualification.service";
@@ -48,7 +48,7 @@ export class ModifyEmployeeComponent implements OnInit {
     this.editEmployee.qualifications = this.editEmployee.qualifications.filter(q=>q.designation!==qualification.designation);
   }
 
-  deleteEmployee(employee: Employee){
-    this.employeeService.deleteEmployee(employee);
+  deleteEmployee(employee: Employee, checkyboxn : boolean){
+    this.employeeService.deleteEmployee(employee, checkyboxn);
   }
 }

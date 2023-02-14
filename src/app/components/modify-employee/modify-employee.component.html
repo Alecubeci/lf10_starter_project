@@ -8,7 +8,7 @@
 <router-outlet></router-outlet>
 
 <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
-  <div>
+  <div class="left-column">
     <label for="editEmployee-LastName">Last Name: </label>
     <input type="text" class="form-control" id="editEmployee-LastName" required [(ngModel)]="editEmployee.lastName"
            name="editEmployee-LastName">
@@ -19,13 +19,13 @@
     <input type="text" class="form-control" id="editEmployee-Postcode" required minlength="5" maxlength="5"
            [(ngModel)]="editEmployee.postcode" name="editEmployee-Postcode">
     <div class="qualification-container" *ngFor="let q of editEmployee.qualifications">
-<span>
-  <label>{{q.designation}}</label>
-  <button (click)="deleteQualification(q)">x</button>
-</span>
+    <span>
+    <label>{{q.designation}}</label>
+    <button type="button" class="btn btn-primary" (click)="deleteQualification(q)">x</button>
+    </span>
     </div>
   </div>
-  <div class="form-group">
+  <div class="right-column">
     <label for="editEmployee-firstName">First Name: </label>
     <input type="text" class="form-control" id="editEmployee-firstName" required [(ngModel)]="editEmployee.firstName"
            name="editEmployee-firstName">
@@ -36,23 +36,19 @@
     <input type="text" class="form-control" id="editEmployee-City" required [(ngModel)]="editEmployee.city"
            name="editEmployee-City">
     <select [(ngModel)]="selectedQualification" name="editEmployee-Qualifications">
-      <ng-container *ngFor="let q of qualificationService.qualifications$ | async">
-        <option *ngIf="!containsQualification(editEmployee.qualifications,q)" [ngValue]="q">{{q.designation}}</option>
-      </ng-container>
+    <ng-container *ngFor="let q of qualificationService.qualifications$ | async">
+      <option *ngIf="!containsQualification(editEmployee.qualifications,q)" [ngValue]="q">{{q.designation}}</option>
+    </ng-container>
     </select>
     <button type="button" class="btn btn-primary" (click)="addQualification()">Add</button>
-    <button type="button" class="material-icons" (click)="deleteEmployee(editEmployee)">Delete</button>
-
+    <button type="button" class="btn btn-primary" (click)="deleteEmployee(editEmployee, true)">Delete</button>
   </div>
 
-  <div>
+
+
+  <div class="nav">
     <button type="button" class="btn btn-primary" (click)="backToPreviousSite()">Back</button>
     <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
-
-<span>
-
-
-</span>
   </div>
 </form>
 

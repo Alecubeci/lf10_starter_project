@@ -1,14 +1,9 @@
 <form>
-  <div class="container1">
-    <input type="text" placeholder="Username" id="uname" name="uname" required [(ngModel)]="username">
-  </div>
-  <div class="container2">
-    <input type="password" placeholder="Password" id="psw" name="psw" required [(ngModel)]="password">
-  </div>
-  <div class="container3">
-    <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
-
-  </div>
+  <input type="text" placeholder="Username" id="uname" name="uname" required [(ngModel)]="username">
+  <br>
+  <input type="password" placeholder="Password" id="psw" name="psw" required [(ngModel)]="password">
+  <br>
+  <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
   <div class="container">
     {{stateMessage}}
   </div>

@@ -1,39 +1,19 @@
+form{
+  margin: auto;
+  display: inline-list-item;
+  text-align: center;
+  margin-top: 20%;
+}
+
 .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-
-}
-.container1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-
-}
-.container2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 45%;
-  left: 40%;
-
-}
-.container3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 45%;
-
+  color: red;
+  margin-top: 50px;
 }
 
 input{
-  margin: 3px;
+  margin: 9px;
+}
+
+button{
+  margin: 9px;
 }

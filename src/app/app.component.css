@@ -1,13 +1,10 @@
 h1 {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 5%;
-  left: 30%;
-
-
   border: solid;
-}
+  width: 40%;
+  height: 60px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 2%;
 
+}

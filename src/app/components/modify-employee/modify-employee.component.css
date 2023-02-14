@@ -1,6 +1,23 @@
 h2{
   text-align: center;
 }
+.left-column{
+  float: left;
+  margin-top: 10%;
+  margin-left: 25%;
+  display: inline-block;
+}
+.right-column{
+  float: right;
+  margin-top: 10%;
+  margin-right: 25%;
+  display: inline-block;
+
+}
+.nav{
+  float: bottom;
+  display: block;
+}
 form{
 
 }
@@ -8,12 +25,11 @@ form{
   width: 400px;
 }
 .btn{
-  margin: 5px;
+
 }
 span{
 border:1px solid black
 }
-.qualification-container{display:inline-block}
 
 .ng-valid[required], .ng-valid.required  {
   border-left: 20px solid #42A948; /* green */
