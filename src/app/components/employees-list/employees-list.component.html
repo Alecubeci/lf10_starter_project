@@ -5,16 +5,16 @@
 
 <div>
   <div>
-    <input type="text" placeholder="ID-Suche" [(ngModel)]="filterId">
   </div>
   <div>
-    <label>Qualification:</label>
+    <nav>
+      <add [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>Add</add>
+      <input class="search" type="text" placeholder="ID-Suche" [(ngModel)]="filterId">
+      <label>Qualification:</label>
       <select [(ngModel)]="filterQualification">
         <option value="" selected="selected">--<option>
         <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
       </select>
-    <nav>
-      <add [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>Add</add>
 
 
     </nav>
@@ -22,5 +22,5 @@
   </div>
 </div>
   <hr>
-  <app-employee-display [filterId]="filterId" [filterQualification]="filterQualification"></app-employee-display>
+  <app-employee-display  [filterId]="filterId" [filterQualification]="filterQualification"></app-employee-display>
 </div>
