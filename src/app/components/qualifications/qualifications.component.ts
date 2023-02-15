@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-qualifications',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QualificationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  backToPreviousSite(){
+    this.router.navigateByUrl('/employees');
   }
 
 }

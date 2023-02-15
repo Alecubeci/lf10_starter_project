@@ -1,9 +1,9 @@
-<form> <h1>Qualification:</h1>
-  <h3> Create new Qualification:</h3>
+<form>
+  <h2>Manage Qualifications</h2>
+  <h4> Create new Qualification:</h4>
   <div class="mb-2">
-    <label for="newQualificationName">Name:</label>
     <input id="newQualificationName" name="newQualificationName"
-           type="string" [(ngModel)]="qualificationName"
+           type="text" [(ngModel)]="qualificationName"
            placeholder="Enter new Qualification " >
     <button type="submit" class="btn btn-primary" (click)="add()">Add</button>
   </div>

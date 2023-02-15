@@ -10,16 +10,12 @@
     <nav>
       <add [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>New Entry</add>
       <input class="search" type="text" placeholder="ID-Suche" [(ngModel)]="filterId">
-      <label>Qualification:</label>
+      <label>Qualification Filter:</label>
       <select [(ngModel)]="filterQualification">
         <option value="" selected="selected">--<option>
         <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
       </select>
-      <nav>
-        <a [routerLink]="['/qualifications']">Qualifications</a>
-      </nav>
-      <router-outlet></router-outlet>
-
+      <add [routerLink]="['/qualifications']">Manage Qualifications</add>
 
     </nav>
 
