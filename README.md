@@ -97,3 +97,8 @@ Des Weiteren ist der Client mit der Bezeichnung employee-management-service-fron
 
 Trage hier die Features ein, die nicht funktionieren. Beschreibe den jeweiligen Fehler. 
 
+Falls der Server nicht starten will:
+
+npm install --save-dev typescript ts-node @types/node @types/webpack
+
+npm install --save-dev @types/webpack-dev-server
