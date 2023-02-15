@@ -13,13 +13,11 @@ h4{
   margin-left: 5px;
 }
 log{
-  margin-top: 55px;
-  margin-left: 90%;
-  display: inline-block;
   background-color: #e8e8e8;
   color: #3d3d3d;
   border-radius: 4px;
   cursor: pointer;
-
+  position: fixed;
+  margin-left: 83%;
+  display: inline-block;
 }
-
