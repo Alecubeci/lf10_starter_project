@@ -6,13 +6,13 @@ h2{
   position: fixed;
   margin-left: 25%;
   display: inline-block;
-  margin-top: 200px;
+  margin-top: 10%;
 }
 .right-column{
   position: fixed;
   margin-left: 55%;
   display: inline-block;
-  margin-top: 200px;
+  margin-top: 10%;
 }
 .lower-column{
   position: fixed;
