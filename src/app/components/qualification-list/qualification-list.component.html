@@ -10,7 +10,7 @@
   <ng-container *ngFor="let s of qualificationService.qualifications$ | async">
     <tr>
       <td>{{s.designation}}</td>
-      <td><button type="button" class="material-icons"(click)="filter(s)">filter</button></td>
+      <td><button type="button" class="material-icons"(click)="filter(s)">tune</button></td>
       <td><button type="button" class="material-icons"(click)="delete(s.designation)">delete</button></td>
     </tr>
   </ng-container>
