@@ -3,7 +3,6 @@
 <table class="table table-striped table-hover" id="tableid">
   <thead>
   <tr id="rowid">
-    <th></th>
     <th>ID</th>
     <th>Last Name</th>
     <th>First Name</th>
@@ -16,7 +15,6 @@
   <ng-container *ngFor="let s of employeeService.employees$ |async">
     <tbody *ngIf="(!filterId||s.id==filterId)&&(!filterQualification||containsQualification(s.qualifications,filterQualification))">
     <tr>
-      <td><input type="checkbox" name="checky" id="checkyboxn" ></td>
       <td>{{s.id}}</td>
       <td>{{s.lastName}}</td>
       <td>{{s.firstName}}</td>
@@ -26,7 +24,7 @@
       <td>{{s.phone}}</td>
 
       <td><button type="button" class="material-icons" (click)="editEmployee(s)">edit</button></td>
-
+      <td><button type="button" class="material-icons" (click)="deleteEmployee(s)">delete</button></td>
     </tr>
     <tr>
       <td colspan = 7>
@@ -42,6 +40,3 @@
   </ng-container>
 
 </table>
-<ng-container *ngFor="let s of employeeService.employees$ |async">
-<button type="button"  (click)="deleteEmployee(s, true)">Delete</button>
-</ng-container>

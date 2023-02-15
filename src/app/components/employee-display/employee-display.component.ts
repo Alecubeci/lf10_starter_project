@@ -28,9 +28,9 @@ export class EmployeeDisplayComponent implements OnInit {
     this.router.navigateByUrl('/modifyEmployee', { state: employee });
   }
 
-  deleteEmployee(employee: Employee, checkyboxn: boolean){
+  deleteEmployee(employee: Employee){
 
-    this.employeeService.deleteEmployee(employee, checkyboxn);
+    this.employeeService.deleteEmployee(employee);
   }
 
 

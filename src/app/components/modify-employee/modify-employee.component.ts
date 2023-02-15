@@ -48,7 +48,7 @@ export class ModifyEmployeeComponent implements OnInit {
     this.editEmployee.qualifications = this.editEmployee.qualifications.filter(q=>q.designation!==qualification.designation);
   }
 
-  deleteEmployee(employee: Employee, checkyboxn : boolean){
-    this.employeeService.deleteEmployee(employee, checkyboxn);
+  deleteEmployee(employee: Employee){
+    this.employeeService.deleteEmployee(employee);
   }
 }

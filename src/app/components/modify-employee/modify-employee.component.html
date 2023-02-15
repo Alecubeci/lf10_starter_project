@@ -42,7 +42,7 @@
 
   <div class="lower-column">
     <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
-    <button type="button" class="btn btn-primary" [disabled]="editEmployee.id===-1" (click)="deleteEmployee(editEmployee, true); backToPreviousSite()">Delete</button>
+    <button type="button" class="btn btn-primary" [disabled]="editEmployee.id===-1" (click)="deleteEmployee(editEmployee); backToPreviousSite()">Delete</button>
     <button type="button" class="btn btn-primary" (click)="backToPreviousSite()">Cancel</button>
   </div>
 </form>

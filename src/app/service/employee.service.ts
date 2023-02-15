@@ -53,13 +53,11 @@ export class EmployeeService {
     this.employees.next(newEmployees);
   }
 
-  async deleteEmployee(employee: Employee, checkyboxn: boolean):Promise<void>{
-    if(checkyboxn){
-      await this.httpCommunicatorService.deleteEmployee(employee.id);
-      let newEmployees : Employee[] = this.employees.value;
-      newEmployees = newEmployees.filter(e=>e.id!==employee.id)
-      this.employees.next(newEmployees);
-    }
+  async deleteEmployee(employee: Employee):Promise<void>{
+    await this.httpCommunicatorService.deleteEmployee(employee.id);
+    let newEmployees : Employee[] = this.employees.value;
+    newEmployees = newEmployees.filter(e=>e.id!==employee.id)
+    this.employees.next(newEmployees);
   }
 
   async modifyEmployee(employee: Employee):Promise<void>{
