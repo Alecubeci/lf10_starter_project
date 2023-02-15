@@ -1,9 +1,10 @@
-<log [routerLink]="['/login']" >Logout</log>
+<log class="btn btn-primary" [routerLink]="['/login']" >Logout</log>
 <h2 *ngIf="editEmployee.id===-1">Create new employee</h2>
 <h2 *ngIf="editEmployee.id!==-1">User Data</h2>
-<div>
-
+<div class="IdInfo">
+  <label><h6><b>ID: {{editEmployee.id}}</b></h6></label>
 </div>
+
 <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
   <div class="left-column">
     <label for="editEmployee-LastName">Last Name: </label>
