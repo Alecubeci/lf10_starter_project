@@ -18,6 +18,6 @@ log{
   border-radius: 4px;
   cursor: pointer;
   position: fixed;
-  margin-left: 83%;
+  left: 87%;
   display: inline-block;
 }
