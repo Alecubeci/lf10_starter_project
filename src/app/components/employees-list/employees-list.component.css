@@ -43,6 +43,7 @@ nav a.active {
   background-color: black;
 }
 log{
+  width: 80px;
   border-radius: 4px;
   cursor: pointer;
   position: fixed;

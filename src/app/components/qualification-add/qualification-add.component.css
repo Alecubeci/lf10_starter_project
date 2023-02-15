@@ -13,9 +13,9 @@ h4{
   margin-left: 5px;
 }
 log{
+  width: 80px;
   border-radius: 4px;
   cursor: pointer;
   position: fixed;
   left: 87%;
-  display: inline-block;
 }

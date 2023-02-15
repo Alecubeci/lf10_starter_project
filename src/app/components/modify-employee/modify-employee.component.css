@@ -54,8 +54,9 @@ border:1px solid black
   border-left: 20px solid #a94442; /* red */
 }
 log{
+  width: 80px;
   border-radius: 4px;
   cursor: pointer;
   position: fixed;
-  transform: translate(2180%, 0%);
+  left: 86.45%;
 }
