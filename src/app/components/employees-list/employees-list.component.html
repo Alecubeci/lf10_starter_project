@@ -1,7 +1,6 @@
+<log [routerLink]="['/login']" >Logout</log>
 <div class="container" xmlns="http://www.w3.org/1999/html">
-
 <div>
-  <div>
     <nav>
       <add [routerLink]="['/modifyEmployee']" [state]=emptyEmployee>New Entry</add>
       <input class="search" type="text" placeholder="ID-Suche" [(ngModel)]="filterId">
@@ -11,9 +10,8 @@
         <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
       </select>
       <add [routerLink]="['/qualifications']">Manage Qualifications</add>
-      <log [routerLink]="['/login']" >Logout</log>
+
     </nav>
-  </div>
 </div>
   <hr>
   <app-employee-display  [filterId]="filterId" [filterQualification]="filterQualification"></app-employee-display>
