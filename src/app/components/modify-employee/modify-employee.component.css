@@ -3,16 +3,16 @@ h2{
   margin: 5px;
 }
 .left-column{
-  float: left;
+  position: fixed;
   margin-top: 10%;
-  margin-left: 25%;
-  display: inline-block;
+  left: 30%;
+  transform: translate(-25%, 25%);
 }
 .right-column{
-  float: right;
+  position: fixed;
   margin-top: 10%;
-  margin-right: 25%;
-  display: inline-block;
+  right: 20%;
+  transform: translate(-25%, 25%);
 
 }
 .lower-column{
@@ -21,9 +21,7 @@ h2{
   bottom: 100px;
   transform: translate(-50%, 50%);
 }
-form{
 
-}
 .form-control{
   width: 400px;
 }
