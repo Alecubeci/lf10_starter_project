@@ -15,6 +15,10 @@
         <option value="" selected="selected">--<option>
         <option *ngFor="let q of qualificationService.qualifications$ | async" [ngValue]="q.designation">{{q.designation}}</option>
       </select>
+      <nav>
+        <a [routerLink]="['/qualifications']">Qualifications</a>
+      </nav>
+      <router-outlet></router-outlet>
 
 
     </nav>
